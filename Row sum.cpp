@@ -3,10 +3,10 @@
 using namespace std;
 
 //double frec(int n) {
-//	if (n==1)
+//	if ()
 //}
 
-double f(int x, int n)
+double f(double x, int n)
 {
 	double S = 0, k;
 	for (int i = 1; i <= n; i++) {
@@ -17,8 +17,12 @@ double f(int x, int n)
 }
 
 int main() {
-	int x, n;
+	setlocale(0, "");
+	int n;
+	double fn, x;
 	cin >> x >> n;
-	cout << f(x,n) << endl;
+	fn = x * atan(x) - log(sqrt(1 + x * x));
+	cout << "Вычисленное значение = " << f(x, n) << endl;
+	cout << "Значение функции = " << fn << endl;
 	return 0;
 }
